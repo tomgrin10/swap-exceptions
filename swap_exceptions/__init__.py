@@ -12,10 +12,12 @@ ExceptionSourceType = Union[Type[Exception], Tuple[Type[Exception]]]
 ExceptionTargetType = Union[Exception, Callable[[Exception], Exception]]
 ExceptionMappingType = Dict[ExceptionSourceType, ExceptionTargetType]
 
+SwapExceptionsReturnType = Union[ContextManager, Callable[[Callable], Callable]]
+
 
 @contextmanager
 def swap_exceptions(exception_mapping, raise_from=True):
-    # type: (ExceptionMappingType, bool) -> ContextManager
+    # type: (ExceptionMappingType, bool) -> SwapExceptionsReturnType
     """
     Swap raised exception with other exceptions.
 
