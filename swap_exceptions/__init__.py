@@ -15,6 +15,7 @@ ExceptionMappingType = Dict[ExceptionSourceType, ExceptionTargetType]
 SwapExceptionsReturnType = Union[ContextManager, Callable[[Callable], Callable]]
 
 
+
 @contextmanager
 def swap_exceptions(exception_mapping, raise_from=True):
     # type: (ExceptionMappingType, bool) -> SwapExceptionsReturnType
