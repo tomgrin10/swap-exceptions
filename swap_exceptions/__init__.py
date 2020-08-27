@@ -17,7 +17,7 @@ SwapExceptionsReturnType = Union[ContextManager, Callable[[Callable], Callable]]
 def swap_exceptions(exception_mapping, raise_from=True):
     # type: (ExceptionMappingType, bool) -> SwapExceptionsReturnType
     """
-    Swap raised exception with other exceptions.
+    Swap raised exception with othe exceptions.
 
     :param exception_mapping: Mapping between exception types (or tuples of them)
      and exceptions to swap to (or functions creating them)
