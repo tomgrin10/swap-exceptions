@@ -1,13 +1,12 @@
 from contextlib import contextmanager
-from typing import Iterable, Type, ContextManager, Union, Callable, Any, Dict, Tuple
+from typing import (
+    Any, Callable, ContextManager, Dict, Iterable, Tuple, Type, Union)
 
-__all__ = [
-    'swap_exceptions'
-]
-
-# Exception type or iterable of exception types
 import six
 
+__all__ = ["swap_exceptions"]
+
+# Exception type or iterable of exception types
 ExceptionSourceType = Union[Type[Exception], Tuple[Type[Exception]]]
 ExceptionTargetType = Union[Exception, Callable[[Exception], Exception]]
 ExceptionMappingType = Dict[ExceptionSourceType, ExceptionTargetType]

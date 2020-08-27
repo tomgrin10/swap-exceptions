@@ -7,26 +7,28 @@ on:
 
 jobs:
   test38:
+    name: Run tests on python 3.8
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v1
 
-      - name: Build package
+      - name: Run tests
         uses: abatilo/actions-poetry@v1.11.0
         with:
           python_version: 3.8
           args: run pytest tests/
 
   test27:
+    name: Run tests on python 2.7
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v1
 
-      - name: Build package
+      - name: Run tests
         uses: abatilo/actions-poetry@v1.11.0
         with:
           python_version: 2.7
