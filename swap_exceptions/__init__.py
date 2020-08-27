@@ -1,7 +1,11 @@
-from contextlib import contextmanager
 from typing import Any, Callable, ContextManager, Dict, Iterable, Tuple, Type, Union
 
 import six
+
+if six.PY2:
+    from contextlib2 import contextmanager
+else:
+    from contextlib import contextmanager
 
 __all__ = ["swap_exceptions"]
 
