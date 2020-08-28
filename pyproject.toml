@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "swap-exceptions"
-version = "1.0.1"
+version = "1.0.2"
 description = "Python utility decorator and context manager for swapping exceptions"
 authors = ["Tom Gringauz <tomgrin10@gmail.com>"]
 license = "MIT"
